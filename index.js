@@ -110,11 +110,11 @@ var drop = function(info){var o = {
    },
    renderDrop: function(){ 
       var that = this;
-      var parentHTML = $.template('<div></div>')
+      var parentHTML = customUtils.template('<div></div>')
       this.selected.forEach(function(select, index){ 
          var option = that.options[select.index];
-         var childHTML = $.template('<span class="item '+ select.state +'">'+ option.html +'</span>')
-         var childCloseHTML = $.template(
+         var childHTML = customUtils.template('<span class="item '+ select.state +'">'+ option.html +'</span>')
+         var childCloseHTML = customUtils.template(
             '<i class="material-icons btnclose" data-index="'+select.index+'">&#xe5c9;</i></span>')
          childCloseHTML.on('click', function(e){ that.removeOption(e, this) })
          childHTML.appendChild(childCloseHTML)
@@ -125,9 +125,9 @@ var drop = function(info){var o = {
    },
    renderOptions: function(){  
       var that = this;
-      var parentHTML = $.template('<div></div>')
+      var parentHTML = customUtils.template('<div></div>')
       this.options.forEach(function(option, index){
-         var childHTML = $.template(
+         var childHTML = customUtils.template(
             '<a data-index="'+index+'" class="'+option.state+'">'+ option.html +'</a>')
          childHTML.on('click', function(e){ that.addOption(e, this) })
          parentHTML.appendChild(childHTML)
