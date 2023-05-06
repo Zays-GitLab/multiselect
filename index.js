@@ -172,9 +172,3 @@ var options = [
    { html: 'cats', value: 'whales' },
    { html: 'cats', value: 'bikes' },
 ];
-
-var myDrop = new drop({
-   selector:  '#myMulti',
-   preselected: []
-});
-myDrop.toggle();
