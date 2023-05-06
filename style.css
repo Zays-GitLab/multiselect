@@ -1,20 +1,12 @@
 @charset "UTF-8";
 /* CSS Document * Varun Dewan 2019 */
 
-html, body {
-  padding: 0px;
-  margin: 0px;
-  background: #222;
-  font-family: 'Raleway', sans-serif;
-  color: #444;
-}
-
 body * {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
-  color: #222;
 }
+
 body section {
   margin-bottom: 10px;
 }
