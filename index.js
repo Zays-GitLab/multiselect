@@ -1,5 +1,5 @@
 //Varun Dewan 2019
-var $ = {
+var customUtils = {
    get: function(selector){ 
       var ele = document.querySelectorAll(selector);
       for(var i = 0; i < ele.length; i++){
@@ -25,17 +25,17 @@ var drop = function(info){var o = {
    preselected: info.preselected || [],
    open: false,
    html: {
-      select: $.get(info.selector)[0],
-      options: $.get(info.selector + ' option'),
+      select: customUtils.get(info.selector)[0],
+      options: customUtils.get(info.selector + ' option'),
       parent: undefined,
    },
    init: function(){
       //Setup Drop HTML
-      this.html.parent = $.get(info.selector)[0].parentNode
-      this.html.drop = $.template('<div class="drop"></div>')
-      this.html.dropDisplay = $.template('<div class="drop-display">Display</div>')
-      this.html.dropOptions = $.template('<div class="drop-options">Options</div>')
-      this.html.dropScreen = $.template('<div class="drop-screen"></div>')
+      this.html.parent = customUtils.get(info.selector)[0].parentNode
+      this.html.drop = customUtils.template('<div class="drop"></div>')
+      this.html.dropDisplay = customUtils.template('<div class="drop-display">Display</div>')
+      this.html.dropOptions = customUtils.template('<div class="drop-options">Options</div>')
+      this.html.dropScreen = customUtils.template('<div class="drop-screen"></div>')
       
       this.html.parent.insertBefore(this.html.drop, this.html.select)
       this.html.drop.appendChild(this.html.dropDisplay)
